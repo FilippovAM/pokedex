@@ -1,0 +1,105 @@
+$card-max-width: 300px;
+
+.pokemon-card {
+    margin: 15px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 20px;
+    border: 5px solid #9494a4;
+    max-width: $card-max-width;
+    background-color: #ffe50a;
+    background-image: linear-gradient(to top, #ffe50a, #ffea3d 70%, #ffe50a);
+}
+
+// region ---- name
+.pokemon-card__name {
+    margin: 0;
+    text-transform: capitalize;
+}
+// ---- endregion
+
+// region ---- content
+.pokemon-card__content {
+    background: #ddd;
+    padding: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 3px #aaa;
+}
+// ---- endregion
+
+
+// region ---- tags
+.pokemon-card__tag {
+    padding: 5px;
+    display: inline-block;
+    margin: 0 3px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 2px black;
+
+    &_steel {
+        background: #5f5f6d;
+    }
+
+    &_normal {
+        background: saddlebrown;
+    }
+
+    &_ghost {
+        background: orchid;
+    }
+
+    &_ice {
+        background: #61dafb;
+    }
+
+    &_fire {
+        background: #ff593d;
+    }
+
+    &_poison {
+        background: purple;
+    }
+
+    &_grass {
+        background: green;
+    }
+
+    &_flying {
+        background: #7b1ce6;
+    }
+
+    &_water {
+        background: #16a0ff;
+    }
+
+    &_bug {
+        background: #a79554;
+    }
+
+    &_electric {
+        background: #5c6afe;
+    }
+
+    &_ground {
+        background: brown;
+    }
+
+    &_fairy {
+        background: darkseagreen;
+    }
+
+    &_fighting {
+        background: midnightblue;
+    }
+
+    &_psychic {
+        background: deeppink;
+    }
+
+    &_rock {
+        background: goldenrod;
+    }
+}
+// ---- endregion

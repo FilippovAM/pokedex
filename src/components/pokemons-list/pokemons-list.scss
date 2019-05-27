@@ -1,0 +1,12 @@
+$card-min-width: 180px;
+
+.pokemons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .pokemon-card {
+        flex: 1 1;
+        min-width: $card-min-width;
+    }
+}
