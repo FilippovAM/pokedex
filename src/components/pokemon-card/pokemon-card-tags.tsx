@@ -3,11 +3,11 @@ import classNames from 'classnames';
 import {PokemonType} from '../../utils/interfaces';
 import {Tag} from '../tag/tag';
 
-interface PokemonCardNameProps {
+interface PokemonCardTagsProps {
     types: PokemonType[];
 }
 
-export const PokemonCardTags = (props: PokemonCardNameProps) => {
+export const PokemonCardTags = (props: PokemonCardTagsProps) => {
     const {types} = props;
     return (
         <div className="pokemon-card__tags">

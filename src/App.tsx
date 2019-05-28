@@ -3,7 +3,7 @@ import './App.css';
 import {configure} from 'mobx';
 import {Provider} from 'mobx-react';
 import pokedexStore from './stores/pokedex';
-import PokemonsList from './components/pokemons-list';
+import PokemonsPage from './pages/pokemons-page';
 
 configure({enforceActions: 'always'});
 
@@ -11,7 +11,7 @@ const App = () => {
     return (
         <Provider pokedexStore={pokedexStore}>
             <div className="App">
-                <PokemonsList/>
+                <PokemonsPage/>
             </div>
         </Provider>
     );

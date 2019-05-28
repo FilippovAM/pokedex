@@ -1,4 +1,4 @@
-import {action, observable} from 'mobx';
+import {action, computed, observable} from 'mobx';
 import {accumulateArray} from '../utils/functions';
 import {PokemonData} from '../utils/interfaces';
 
@@ -7,6 +7,7 @@ const POKEDEX_API_URL = `https://pokeapi.co/api/v2/pokemon/`;
 export class PokedexStore {
     @observable isLoading: boolean = false;
     @observable data: PokemonData[] = [];
+    @observable filterValue: string = '';
 
     fetchData = (start: number = 1, end: number = 100) => {
         this.setLoading(true);
@@ -37,6 +38,16 @@ export class PokedexStore {
     @action
     setLoading = (value: boolean) => {
         this.isLoading = value;
+    }
+
+    @computed
+    get filteredData() {
+        return this.data.filter((item) => item.name.indexOf(this.filterValue) !== -1);
+    }
+
+    @action
+    setFilterValue = (value: string) => {
+        this.filterValue = value;
     }
 }
 
